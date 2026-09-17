@@ -1,0 +1,56 @@
+.matrix-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.matrix-pattern {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.matrix-column {
+  position: absolute;
+  top: -100%;
+  width: 20px;
+  height: 100%;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  animation: fall linear infinite;
+  white-space: nowrap;
+}
+
+.matrix-column::before {
+  content: "0123456789";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #ffffff 5%,
+    #ff3b3b 10%,
+    #ff3b3b 20%,
+    #e63030 30%,
+    #cc2626 40%,
+    #b31d1d 50%,
+    #991414 60%,
+    #800a0a 70%,
+    #660505 80%,
+    rgba(255, 59, 59, 0.5) 90%,
+    transparent 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  writing-mode: vertical-lr;
+  letter-spacing: 1px;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-10%); opacity: 1; }
+  100% { transform: translateY(200%); opacity: 0; }
+}
