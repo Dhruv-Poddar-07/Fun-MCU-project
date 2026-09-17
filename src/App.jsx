@@ -1,16 +1,12 @@
 import React from 'react'
-import {
-  motion,
-  useMotionValue,
-  useTransform,
-} from 'framer-motion'
+import {motion,useMotionValue,useTransform} from 'framer-motion'
 
 import CanvasEffect from './CanvasEffect'
 import ScratchCanvas from './ScratchCanvas'
 import CustomCursor from './CustomCursor'
 import Section2 from './Section2'
 import AvengersSection from './AvengersSection'
-
+import StonesSection from './StonesSection'
 
 // ======================================================
 // SECTION 2
@@ -102,6 +98,7 @@ const App = () => {
       </div>
       <Section2 />
       <AvengersSection />
+      <StonesSection />
 
     </div>
   )
