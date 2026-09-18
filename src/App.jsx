@@ -7,6 +7,7 @@ import CustomCursor from './CustomCursor'
 import Section2 from './Section2'
 import AvengersSection from './AvengersSection'
 import StonesSection from './StonesSection'
+import VillainsSection from './VillainsSection'
 
 // ======================================================
 // SECTION 2
@@ -99,6 +100,7 @@ const App = () => {
       <Section2 />
       <AvengersSection />
       <StonesSection />
+      <VillainsSection />
 
     </div>
   )
