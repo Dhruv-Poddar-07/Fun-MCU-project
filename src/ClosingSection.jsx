@@ -52,10 +52,10 @@ const ClosingSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <a href="https://github.com/yourusername" target="_blank" rel="noreferrer" className="magnetic-target px-5 py-2 border border-white/30 rounded-full text-sm hover:bg-white hover:text-black transition-colors">
+          <a href="https://github.com/Dhruv-Poddar-07" target="_blank" rel="noreferrer" className="magnetic-target px-5 py-2 border border-white/30 rounded-full text-sm hover:bg-white hover:text-black transition-colors">
             GitHub
           </a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer" className="magnetic-target px-5 py-2 border border-white/30 rounded-full text-sm hover:bg-white hover:text-black transition-colors">
+          <a href="https://www.linkedin.com/in/dhruv-poddar-b2b3583b6" target="_blank" rel="noreferrer" className="magnetic-target px-5 py-2 border border-white/30 rounded-full text-sm hover:bg-white hover:text-black transition-colors">
             LinkedIn
           </a>
         </motion.div>

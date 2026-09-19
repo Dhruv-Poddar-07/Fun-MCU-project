@@ -8,6 +8,8 @@ import AvengersSection from './AvengersSection'
 import StonesSection from './StonesSection'
 import VillainsSection from './VillainsSection'
 import ClosingSection from './ClosingSection'
+import NavMenu from './NavMenu'
+
 
 const isTouchDevice = typeof window !== 'undefined' && ('ontouchstart' in window || navigator.maxTouchPoints > 0)
 
@@ -21,7 +23,7 @@ const App = () => {
   const handleExplore = () => {
     setLocked(false)
     setTimeout(() => {
-      document.getElementById('next-section')?.scrollIntoView({ behavior: 'smooth' })
+      document.getElementById('timeline')?.scrollIntoView({ behavior: 'smooth' })
     }, 50)
   }
 
@@ -29,8 +31,9 @@ const App = () => {
     <div>
       <CustomCursor />
       <CanvasEffect />
+      <NavMenu />
 
-      <div className="h-screen relative overflow-hidden bg-black text-white">
+      <div id="hero" className="h-screen relative overflow-hidden bg-black text-white">
         <video
           src="/hero-video.mp4"
           autoPlay
@@ -69,13 +72,22 @@ const App = () => {
         </div>
       </div>
 
-      <div id="next-section">
+      <div id="timeline">
         <Section2 />
       </div>
-      <AvengersSection />
-      <StonesSection />
-      <VillainsSection />
-      <ClosingSection />
+      <div id="heroes">
+        <AvengersSection />
+      </div>
+      <div id="stones">
+        <StonesSection />
+      </div>
+      <div id="villains">
+        <VillainsSection />
+      </div>
+      <div id="closing">
+        <ClosingSection />
+      </div>
+
     </div>
   )
 }
