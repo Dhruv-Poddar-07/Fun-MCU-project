@@ -71,7 +71,7 @@ const ParticleName = ({ text = "YOUR NAME" }) => {
     const dx = mouse.x - p.targetX
     const dy = mouse.y - p.targetY
     const dist = Math.sqrt(dx * dx + dy * dy)
-    const magnetRange = 240
+    const magnetRange = 380
 
     let ax = 0
     let ay = 0

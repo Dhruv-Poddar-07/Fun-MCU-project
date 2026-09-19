@@ -24,7 +24,7 @@ const ClosingSection = () => {
         Built by
       </motion.span>
 
-      <div className="w-full max-w-2xl h-40 sm:h-56">
+      <div className="absolute inset-0">
         <ParticleName text="YOUR NAME" />
       </div>
 
