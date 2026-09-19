@@ -92,7 +92,7 @@ clearance: React / Framer Motion / Canvas
 status: Actively seeking deployment (internship)
 ```
 
-**[GitHub](https://github.com/Dhruv-Poddar-07)** · **[LinkedIn](https://linkedin.com/in/your-actual-linkedin-handle)**
+**[GitHub](https://github.com/Dhruv-Poddar-07)** · **[LinkedIn](https://www.linkedin.com/in/dhruv-poddar-b2b3583b6)**
 
 ---
 
