@@ -49,6 +49,7 @@ const ScratchCanvas = () => {
     }
     const moveDraw = (e) => {
       if (!isDrawing.current) return
+      if (e.touches) e.preventDefault()
       const pos = getPos(e)
       const newMid = {
         x: (lastPos.current.x + pos.x) / 2,
@@ -67,8 +68,8 @@ const ScratchCanvas = () => {
     canvas.addEventListener('mousedown', startDraw)
     window.addEventListener('mousemove', moveDraw)
     window.addEventListener('mouseup', stopDraw)
-    canvas.addEventListener('touchstart', startDraw)
-    canvas.addEventListener('touchmove', moveDraw)
+    canvas.addEventListener('touchstart', startDraw, { passive: false })
+    canvas.addEventListener('touchmove', moveDraw, { passive: false })
     canvas.addEventListener('touchend', stopDraw)
 
     return () => {
@@ -82,7 +83,13 @@ const ScratchCanvas = () => {
     }
   }, [])
 
-  return <canvas ref={canvasRef} className="absolute inset-0 w-full h-full z-20" />
+  return (
+    <canvas
+      ref={canvasRef}
+      className="absolute inset-0 w-full h-full z-20"
+      style={{ touchAction: 'pan-y' }}
+    />
+  )
 }
 
 export default ScratchCanvas

@@ -95,7 +95,7 @@ const StonesSection = () => {
   }
 
   return (
-    <div className="relative min-h-screen bg-neutral-950 text-white py-16 sm:py-24 px-4 sm:px-8 overflow-hidden">
+    <div className="relative min-h-screen bg-black text-white py-16 sm:py-24 px-4 sm:px-8 overflow-hidden">
       <motion.h2
         className="text-2xl sm:text-4xl md:text-5xl font-bold text-center mb-4"
         initial={{ opacity: 0, y: 40 }}

@@ -11,7 +11,6 @@ const phases = [
   { phase: "Phase Six", years: "2025 – 2027", desc: "The Multiverse Saga concludes with Avengers: Doomsday and Avengers: Secret Wars.", movies: ["The Fantastic Four: First Steps", "Spider-Man: Brand New Day", "Avengers: Doomsday", "Avengers: Secret Wars"] },
 ]
 
-// detect touch device once
 const isTouchDevice = typeof window !== 'undefined' && ('ontouchstart' in window || navigator.maxTouchPoints > 0)
 
 const PhaseCard = ({ item, i }) => {
@@ -98,13 +97,7 @@ const Section2 = () => {
       onMouseMove={handleMouseMove}
       className="relative min-h-screen bg-neutral-950 text-white py-16 sm:py-24 px-4 sm:px-8 overflow-hidden"
     >
-      <div
-        className="absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage: 'linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)',
-          backgroundSize: '60px 60px',
-        }}
-      />
+      <div className="absolute inset-0 opacity-30 bg-red-500" />
 
       <MatrixRain columns={isTouchDevice ? 20 : 50} />
 
