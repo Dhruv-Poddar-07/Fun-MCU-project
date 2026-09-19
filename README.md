@@ -32,7 +32,7 @@ LOADING SECTORS...
 
 ## 🔗 LIVE DEPLOYMENT
 
-**[▶ ACCESS THE FILE](fun-mcu-project.vercel.app)**
+**[▶ ACCESS THE FILE](https://fun-mcu-project.vercel.app)**
 
 ---
 
