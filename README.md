@@ -28,6 +28,13 @@ LOADING SECTORS...
 
 
 ---
+---
+
+## 🔗 LIVE DEPLOYMENT
+
+**[▶ ACCESS THE FILE](your-deployed-link-here)**
+
+---
 
 ## 🗂️ SECTOR LOG
 
@@ -85,7 +92,7 @@ clearance: React / Framer Motion / Canvas
 status: Actively seeking deployment (internship)
 ```
 
-**[GitHub](https://github.com/Dhruv-Poddar-07)**
+**[GitHub](https://github.com/Dhruv-Poddar-07)** · **[LinkedIn](https://linkedin.com/in/your-actual-linkedin-handle)**
 
 ---
 
