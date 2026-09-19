@@ -47,7 +47,7 @@ const App = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            Your Name / Studio
+            MCU
           </motion.h1>
           <motion.p
             className="text-lg mt-4 opacity-70"
@@ -55,7 +55,7 @@ const App = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           >
-            Tagline goes here
+            Built in the multiverse of code.
           </motion.p>
           <motion.button
             onClick={handleExplore}

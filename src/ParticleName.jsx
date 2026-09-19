@@ -27,7 +27,7 @@ const ParticleName = ({ text = "YOUR NAME" }) => {
     off.height = height
     const offCtx = off.getContext('2d')
     offCtx.fillStyle = '#fff'
-    const fontSize = Math.min(width / (text.length * 0.6), 90)
+    const fontSize = Math.min(width / (text.length * 0.6), 48)
     offCtx.font = `bold ${fontSize}px sans-serif`
     offCtx.textAlign = 'center'
     offCtx.textBaseline = 'middle'

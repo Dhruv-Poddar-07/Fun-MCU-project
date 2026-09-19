@@ -7,7 +7,7 @@ const ClosingSection = () => {
       
       {/* full-screen particle canvas, behind everything */}
       <div className="absolute inset-0 z-0">
-        <ParticleName text="YOUR NAME" />
+        <ParticleName text="DHRUV PODDAR" />
       </div>
 
       {/* all text content, above the canvas */}
