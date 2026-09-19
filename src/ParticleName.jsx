@@ -60,29 +60,51 @@ const ParticleName = ({ text = "YOUR NAME" }) => {
 
     let animationId
     const animate = () => {
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.15)'
-        ctx.fillRect(0, 0, width, height)
+  ctx.fillStyle = 'rgba(0, 0, 0, 0.15)'
+  ctx.fillRect(0, 0, width, height)
 
-        ctx.fillStyle = '#ffffff'
+  ctx.fillStyle = '#ffffff'
 
-        particles.forEach((p) => {
-          const dx = mouse.x - p.targetX
-          const dy = mouse.y - p.targetY
-          const dist = Math.sqrt(dx * dx + dy * dy)
-          const influence = Math.max(0, 1 - dist / 180)
-        
-          const goalX = p.x + (p.targetX - p.x) * (0.02 + influence * 0.15)
-          const goalY = p.y + (p.targetY - p.y) * (0.02 + influence * 0.15)
-          p.x = goalX
-          p.y = goalY
-        
-          ctx.beginPath()
-          ctx.arc(p.x, p.y, 1.5, 0, Math.PI * 2)
-          ctx.fill()
-        })
-    
-        animationId = requestAnimationFrame(animate)
-    }       
+  particles.forEach((p) => {
+    if (p.vx === undefined) { p.vx = 0; p.vy = 0 }
+
+    const dx = mouse.x - p.targetX
+    const dy = mouse.y - p.targetY
+    const dist = Math.sqrt(dx * dx + dy * dy)
+    const magnetRange = 240
+
+    let ax = 0
+    let ay = 0
+
+    if (dist < magnetRange) {
+      const strength = (1 - dist / magnetRange) ** 2
+      const pullX = mouse.x - p.x
+      const pullY = mouse.y - p.y
+      ax = pullX * 0.02 * strength
+      ay = pullY * 0.02 * strength
+    } else {
+      const homeX = p.targetX - p.x
+      const homeY = p.targetY - p.y
+      ax = homeX * 0.015
+      ay = homeY * 0.015
+    }
+
+    // tiny jitter for organic feel
+    ax += (Math.random() - 0.5) * 0.05
+    ay += (Math.random() - 0.5) * 0.05
+
+    p.vx = (p.vx + ax) * 0.88
+    p.vy = (p.vy + ay) * 0.88
+    p.x += p.vx
+    p.y += p.vy
+
+    ctx.beginPath()
+    ctx.arc(p.x, p.y, 1.5, 0, Math.PI * 2)
+    ctx.fill()
+  })
+
+  animationId = requestAnimationFrame(animate)
+}       
 
     if (inView) {
       window.addEventListener('mousemove', handleMouseMove)
